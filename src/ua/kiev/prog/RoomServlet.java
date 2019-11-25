@@ -1,6 +1,7 @@
 package ua.kiev.prog;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,6 +12,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+@WebServlet("/room")
 public class RoomServlet extends HttpServlet {
     private static List<Room> roomList = new ArrayList<Room>();
     private UsersList usersList = UsersList.getInstance();

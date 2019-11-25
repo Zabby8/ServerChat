@@ -1,5 +1,6 @@
 package ua.kiev.prog;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -7,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.OutputStream;
 
+@WebServlet("/getUsers")
 public class GetUsersServlet extends HttpServlet {
     private UsersList usersList = UsersList.getInstance();
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{

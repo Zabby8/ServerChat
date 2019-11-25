@@ -1,6 +1,7 @@
 package ua.kiev.prog;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,6 +12,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
+@WebServlet("/login")
 public class Login extends HttpServlet {
     static Map<String, String> users = new HashMap<String, String>();
     private UsersList usersList = UsersList.getInstance();
